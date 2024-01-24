@@ -1,29 +1,59 @@
 import React from "react";
-import Proj from "./Proj";
 import "./Project.css";
-
+import All_project from "../Assets/All_project";
+// import { useContext } from "react";
+// import ProjectContext from "../ProjectContext/ProjectContext";
 
 export default function Project() {
+  // const { All_project } = useContext(ProjectContext);
+  // console.log(All_project);
 
-    return (
-        <div className="project">
-            <div className="project-content">
-                <h1>Projects</h1>
+  return (
+    <div className="project">
+      <div className="project-content">
+        <div>
+          {" "}
+          <h1>Projects</h1>
+        </div>
         <div className="box">
+          {All_project.map((p) => (
             <div className="project-card">
-            <Proj img=""  />
+              <div className="project_box">
+                {" "}
+                <h2 className="project_name">{p.project_name}</h2>
+                <div className="project_img">
+                  <img src="" alt="img" />
+                </div>
+                <div className="project_aim">{p.aim}</div>
+                <span className="project_links">
+                  <div className="project_live_box">
+                    {" "}
+                    <a
+                      href={p.live}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="project_live"
+                    >
+                      Live
+                    </a>
+                  </div>
+                  <div className="project_live_box">
+                    {" "}
+                    <a
+                      href={p.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="project_live"
+                    >
+                      github
+                    </a>
+                  </div>
+                </span>
+              </div>
             </div>
-            <div className="project-card">
-      <Proj name="Cahal" />
+          ))}
         </div>
-        <div className="project-card">
-      <Proj name="Edite" />
-        </div>
-        </div>
-        </div>
-        </div>
-
-
-        
-    );
-    }
+      </div>
+    </div>
+  );
+}

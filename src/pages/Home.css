@@ -1,126 +1,110 @@
 .home {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-image: url(../images/homeimg.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-  
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url(../images/homeimg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .home-content {
-    width: 50%;
-    height: 70%;
-    align-items: center;
-    justify-content: center;
-    
+  width: 80%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* background-color: goldenrod; */
 }
 .icons {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    gap: 30px;
-  
-}
-.icons >a >button {
-    transition: all 0.5s;
-    font-size: 20px;
-    text-align: center;
-    align-items: center;
-    background-color: white;
-    color: #000;
-    font-family: Roboto, sans-serif;
-    border: none;
-    border-radius: 2px;
-    width: 50px;
-    height: 60px;
-    border-radius: 50%;
-    box-shadow: 2px 2px 0px hsl(0, 0%, 90%),
-      4px 4px 0px hsl(0, 0%, 80%),
-      6px 6px 0px hsl(0, 0%, 70%),
-      8px 8px 0px hsl(0, 0%, 60%),
-     
-      10px 10px 0px hsl(0, 53%, 45%);
-        animation: yourAnimation 0.7s ease-in-out 0s infinite alternate none;
-  }
-  @keyframes yourAnimation{
-    0% {
-        transform:  scale(1);
-    }
-    100% {
-        transform:  scale(1.4);
-    }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
 }
 
+.text {
+  width: 60%;
+  height: 60%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  /* background-color: red; */
+}
+.icons > a > button {
+  transition: all 0.5s;
+  font-size: 100%;
+  text-align: center;
+  align-items: center;
+  background-color: white;
+  color: #000;
+  font-family: Roboto, sans-serif;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  animation: yourAnimation 0.7s ease-in-out 0s infinite alternate none;
+}
+@keyframes yourAnimation {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.4);
+  }
+}
+.text > h1 {
+  font-size: 25px;
+  font-family: sans-serif;
+  font-weight: 900;
+  color: yellow;
+  position: relative;
+  animation: 1s linear 1s infinite running slidein;
+  animation: mymove 3s infinite;
+}
+
+@keyframes mymove {
+  from {
+    left: -0px;
+  }
+  to {
+    left: 50px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .home-content {
+    width: 90%;
+    height: 40%;
+    /* background-color: rebeccapurple; */
+  }
+  .Resume_icon {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    gap: 10%;
+    height: 50%;
+  }
   .text {
-    width: 100%;
-   
+    /* background-color: grey; */
+    width: 90%;
+    text-align: center;
   }
   .text > h1 {
-    font-size: 60px; 
-    font-family: Roboto, sans-serif; 
-    font-weight: 100;
-    color: yellow;
-    position: relative;
-    animation: 1s linear 1s infinite running slidein;
-    animation: mymove 3s infinite;
+    font-size: 15px;
   }
   .text > p {
-    font-size: 40px;
-    text-transform: uppercase;
+    font-size: 19px;
   }
-  
-  @keyframes mymove {
-    from {left: -100px;}
-    to {left: 50px;}
-  }
- .tech {
-    width: 100%;
-    height: 150px;
-    font-size: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
 
- }
-  .tech > span {
-    position: absolute;
-    transform: translateY(80px);
-    animation: loadIn 0.9s ease-in 0.1s forwards ;
-   
+  .text > div {
+    font-size: 10px;
+    color: red;
   }
- 
-  
-  @keyframes loadIn {
-    100% {
-      transform: translateY(70px);
-    } 
-    0% {
-      transform: translateY(0px);
-    }
-  }
-  @media screen and (max-width: 768px){
-
-    .home-content {
-      width: 80%;
-      height: 100%;
-      align-items: center;
-      justify-content: center;
-     
-      
-    }
-    .text > h1{
-      font-size: 15px;
-    }
-    .text > p {
-      font-size: 19px;
-    }
-   
-    .text > div {
-      font-size: 10px;
-      color : red;
-    }
-  }
+}
