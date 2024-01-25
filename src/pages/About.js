@@ -1,7 +1,10 @@
 import React from "react";
 import pic from "../images/alx-profile.jpg";
 import TypeWriterEffect from "react-typewriter-effect";
-
+import { AiFillLinkedin } from "react-icons/ai";
+import { BsGithub } from "react-icons/bs";
+import { AiFillTwitterCircle } from "react-icons/ai";
+import { MdEmail } from "react-icons/md";
 import "./About.css";
 export default function About() {
   return (
@@ -34,14 +37,53 @@ export default function About() {
                 & CSS, Javascript, Bootstrap, ReactJS and Vue.js..
               </p>
             </div>
+          </div>{" "}
+          <br />
+          <div className="icons">
+            <a
+              href="https://www.linkedin.com/in/doris-ene-onah-0b1b1b1b9/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <button className="btn">
+                <AiFillLinkedin />
+              </button>
+            </a>
+            <a
+              href="https://github.com/Doris-onah"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <button className="btn">
+                <BsGithub />
+              </button>
+            </a>
+            <a
+              href="https://twitter.com/DorisOnah"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <button className="btn">
+                <AiFillTwitterCircle />
+              </button>
+            </a>
+            <a
+              href="mailto:onahdorisene@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <button className="btn">
+                <MdEmail />
+              </button>
+            </a>
           </div>
-        </div>
+        </div>{" "}
         <div className="pic">
           <img
             src={pic}
             alt="alx"
-            width="70%"
-            height="70%"
+            width="100%"
+            height="100%"
             style={{ borderRadius: "50%" }}
           />
         </div>

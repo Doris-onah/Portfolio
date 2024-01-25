@@ -10,49 +10,45 @@ export default function Project() {
 
   return (
     <div className="project">
-      <div className="project-content">
-        <div>
-          {" "}
-          <h1>Projects</h1>
-        </div>
-        <div className="box">
-          {All_project.map((p) => (
-            <div className="project-card">
-              <div className="project_box">
-                {" "}
-                <h2 className="project_name">{p.project_name}</h2>
-                <div className="project_img">
-                  <img src="" alt="img" />
-                </div>
-                <div className="project_aim">{p.aim}</div>
-                <span className="project_links">
-                  <div className="project_live_box">
-                    {" "}
-                    <a
-                      href={p.live}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="project_live"
-                    >
-                      Live
-                    </a>
-                  </div>
-                  <div className="project_live_box">
-                    {" "}
-                    <a
-                      href={p.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="project_live"
-                    >
-                      github
-                    </a>
-                  </div>
-                </span>
+      <div className="box">
+        {All_project.map((p) => (
+          <div className="project-card">
+            <div className="project_box">
+              {" "}
+              <h2 className="project_name">{p.project_name}</h2>
+              <div className="project_img">
+                <img src="" alt="img" />
               </div>
+              <br />
+              <div className="project_aim">{p.aim}</div>
+              <br />
+              <span className="project_links">
+                <div className="project_live_box">
+                  {" "}
+                  <a
+                    href={p.live}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="project_live"
+                  >
+                    Live
+                  </a>
+                </div>
+                <div className="project_live_box">
+                  {" "}
+                  <a
+                    href={p.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="project_live"
+                  >
+                    github
+                  </a>
+                </div>
+              </span>
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
       </div>
     </div>
   );

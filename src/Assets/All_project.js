@@ -16,6 +16,7 @@ let All_project = [
   },
   {
     project_name: "intro-section",
+
     aim: "static shopping app that incorporates user authentication. This is a significant achievement, as user authentication is crucial for controlling access to features, managing accounts, and ensuring security. ",
     language: "html,css,javascript",
     live: " https://intro-secton-dropdown.web.app/",
